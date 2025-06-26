@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora Responsiva</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+
+  <div class="bg-white p-6 rounded-xl shadow-xl w-full max-w-xs">
+    <h1 class="text-2xl font-bold text-center mb-4 text-blue-700">Calculadora</h1>
+
+    <div id="display" class="bg-gray-100 text-right text-3xl p-4 rounded mb-4 h-16 overflow-x-auto">
+      0
+    </div>
+
+    <div class="grid grid-cols-4 gap-3">
+      <!-- Linha 1 -->
+      <button class="bg-red-400 text-white rounded text-xl p-3 hover:bg-red-500 transition" onclick="clearDisplay()">C</button>
+      <button class="bg-gray-200 rounded text-xl p-3 hover:bg-gray-300 transition" onclick="addToDisplay('(')">(</button>
+      <button class="bg-gray-200 rounded text-xl p-3 hover:bg-gray-300 transition" onclick="addToDisplay(')')">)</button>
+      <button class="bg-gray-200 text-blue-600 rounded text-xl p-3 hover:bg-blue-100 transition" onclick="addToDisplay('/')">÷</button>
+
+      <!-- Linha 2 -->
+      <button class="bg-gray-200 rounded text-xl p-3 hover:bg-gray-300 transition" onclick="addToDisplay('7')">7</button>
+      <button class="bg-gray-200 rounded text-xl p-3 hover:bg-gray-300 transition" onclick="addToDisplay('8')">8</button>
+      <button class="bg-gray-200 rounded text-xl p-3 hover:bg-gray-300 transition" onclick="addToDisplay('9')">9</button>
+      <button class="bg-gray-200 text-blue-600 rounded text-xl p-3 hover:bg-blue-100 transition" onclick="addToDisplay('*')">×</button>
+
+      <!-- Linha 3 -->
+      <button class="bg-gray-200 rounded text-xl p-3 hover:bg-gray-300 transition" onclick="addToDisplay('4')">4</button>
+      <button class="bg-gray-200 rounded text-xl p-3 hover:bg-gray-300 transition" onclick="addToDisplay('5')">5</button>
+      <button class="bg-gray-200 rounded text-xl p-3 hover:bg-gray-300 transition" onclick="addToDisplay('6')">6</button>
+      <button class="bg-gray-200 text-blue-600 rounded text-xl p-3 hover:bg-blue-100 transition" onclick="addToDisplay('-')">−</button>
+
+      <!-- Linha 4 -->
+      <button class="bg-gray-200 rounded text-xl p-3 hover:bg-gray-300 transition" onclick="addToDisplay('1')">1</button>
+      <button class="bg-gray-200 rounded text-xl p-3 hover:bg-gray-300 transition" onclick="addToDisplay('2')">2</button>
+      <button class="bg-gray-200 rounded text-xl p-3 hover:bg-gray-300 transition" onclick="addToDisplay('3')">3</button>
+      <button class="bg-gray-200 text-blue-600 rounded text-xl p-3 hover:bg-blue-100 transition" onclick="addToDisplay('+')">+</button>
+
+      <!-- Linha 5 -->
+      <button class="bg-gray-200 col-span-2 rounded text-xl p-3 hover:bg-gray-300 transition" onclick="addToDisplay('0')">0</button>
+      <button class="bg-gray-200 rounded text-xl p-3 hover:bg-gray-300 transition" onclick="addToDisplay('.')">.</button>
+      <button class="bg-green-500 text-white rounded text-xl p-3 hover:bg-green-600 transition" onclick="calculate()">=</button>
+    </div>
+  </div>
+
+  <script src="calculadora.js"></script>
+</body>
+</html>
